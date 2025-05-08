@@ -1,36 +1,74 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 40px;
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+body{
+    font-family:"Cascadia Code", sans-serif;
+    background-color: darkcyan;
+    display: flex;
+    
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+
+}
+.container{
     text-align: center;
-}
-
-h1 {
-    color: #333;
-}
-
-.container {
-    background: #fff;
+    background-color: cadetblue;
+    width: 600px;
     padding: 20px;
-    margin: auto;
-    max-width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-input[type="text"] {
-    width: 65%;
+button{
+    background-color: rgb(221, 132, 132);
     padding: 10px;
-    margin-right: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 100px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+
 }
 
-button {
-    padding: 10px 15px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+button:hover{
+
+    background-color:brown ;
+}
+ul{
+    padding: 10px;
+    margin: 10px;
+}
+li{
+    padding: 10px;
+    margin: 5px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.completed{
+    text-decoration: line-through;
+    color: black;
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 200px;
+    font-size: 16px;
+}
+#filterAll{
+    background-color: aquamarine;
+}
+#filterCompleted{
+    background-color: blanchedalmond;
+}
+#filterPending{
+    background-color: burlywood;
 }

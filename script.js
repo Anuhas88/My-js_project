@@ -1,21 +1,25 @@
-document.getElementById('addBtn').addEventListener('click', addTask);
+const taskInput =document.getElementById('TaskInput');
+const addTaskBtn = document.getElementById('addTaskBtn');
+const taskList = document.getElementById('taskList');
+const filterAllBtn = document.getElementById('filterAll');
+const filterCompleteBtn = document.getElementById('filterCompleted');
+const filterPendingBtn = document.getElementById('filterPending');
 
-function addTask() {
-    const taskInput = document.getElementById('taskInput');
-    const TaskText = taskInput.ariaValueMax.trim();
-    if (TaskText === '') return;
+let tasks = [];
+function renderTask(filterTasks = tasks){
+    taskList.innerHTML = "";
+    filterTasks.forEach((Task,index)) => {
+        const li = document.createElement("li");
+        li.classList.toggle("completed",Task.completed);
 
-    const li = document.createElement('li');
-    li.textContent = TaskText;
+        const taskText = document.createElement("span");
+        taskText.textContent = task.name;
+        li.appendChild(taskText);
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delect';
-    deleteBtn.className = 'delect-btn';
-    deleteBtn.onclick = () => li.remove();
-
-    li.appendChild(deleteBtn);
-    document.getElementById('taskList').appendChild(li);
-
-    taskInput.value = '';
-
+        li.onclick = () => toggleTaskComplete(index);
+        
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.onclick = () => deleteTask(index);
+    }
 }
