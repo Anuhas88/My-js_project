@@ -2,7 +2,7 @@
 
 body {
     font-family: "Cascadia Code", sans-serif;
-    background-color: gray;
+    background-color: rgb(100, 98, 98);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
 
 .container {
     text-align: center;
-    background: #1f1f1f;
+    background: #090909;
     width: 600px;
     padding: 30px;
     border-radius: 16px;
